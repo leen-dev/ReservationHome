@@ -1,0 +1,349 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+    font-size: 1.02em;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    left: 0px;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    /* background-color: #666; */
+}
+
+.bx{
+    font-size: 1.7em;
+}
+
+a .bx-brightness:visited{
+    transform: invert(1);
+}
+
+a .bx-brightness:hover{
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+header .search input{
+    width: 400px;
+    height: 35px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding-left: 20px;
+    color: black;
+    /* background-image: url(public/images/sale2.jpeg); */
+}
+
+header.sticky{
+    background-color: #fff;
+    height: 90px;
+    padding: 0px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 1);
+}
+
+header.sticky >.iconmenu,
+header.sticky >.logo,
+header.sticky >.search,
+header.sticky >.navbar >li >a,
+header.sticky >a{
+    color: #2a4963;
+}
+
+header.sticky li a:hover{
+    color: #2a4963;
+    border-bottom: 2px solid #2a4963;
+}
+
+.iconmenu{
+    display: none;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    font-family : "Great Vibes", cursive ;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.navbar > a,
+header > a,
+header > ul > li > a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+    font-weight: 700;
+
+}
+
+header .navbar li a:hover{
+    color: #111;
+    border-bottom: 2px solid #111;
+    letter-spacing: 2px;
+}
+
+/* header .navbar li a:visited{
+    color: aquamarine;
+} */
+
+.btn-reserve{
+    padding: 10px 20px;
+    background-color: #111;
+    margin-top: -10px;
+    text-transform: uppercase;
+}
+
+.btn-reserve:hover{
+    background-color: #111;
+    transition: ease-out;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    /* width: 50%; */
+    margin: auto;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+  /* Modal Content/Box */
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50% !important;
+    margin: auto;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    /* background-clip: padding-box; */
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    padding-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* section contact */
+
+.contacts{
+    /* background-image: url(); */
+    /* background-size: cover; */
+    /* box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); */
+    background-position: unset;
+}
+
+.contacts >.contenu {
+    text-align: center;
+    color: #2a4963;
+    width: 70%;
+    margin: auto;
+}
+
+.contactform{
+    padding: 50px 50px;
+    background-color: #fff;
+    /* box-shadow: 5px 15px 50px rgba(0, 0, 0, 0.8); */
+    max-width: 400px;
+    margin-top: 30px;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 30%; */
+}
+
+.contactform h3{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite{
+    position: relative;
+    width: 120%;
+    margin-bottom: 20px;
+}
+
+.contactform .inputboite input{
+    width: 100%;
+    border: 1px solid #555;
+    border-radius: 10px;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'poppins', sans-serif;
+    resize: none;
+}
+
+.contactform .inputboite input[type="submit"]{
+    font-size: 1em;
+    font-weight: 700;
+    color: #ffff;
+    background-color: #2a4963;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+    max-width: 160px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactform> p > a{
+    color: #2a4963;
+}
+
+/* sesction banniere */
+
+.banniere{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    background-size: cover;
+}
+
+.banniere >.contenu{
+    width: 70%;
+    text-align: center;
+}
+
+.banniere .contenu h2{
+    color: #fff;
+    font-size: 3em;
+    text-transform: capitalize;
+    font-family : "Great Vibes", cursive ;
+    letter-spacing: 2px;
+}
+
+.contenu p:nth-child(2){
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.btn1{
+    color: #fff;
+    font-size: 1em;
+    background-color: #111;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.btn1:hover{
+    letter-spacing: 6px;
+}
+
+.btn2{
+    color: #fff;
+    font-size: 1em;
+    background-color: #2a4963;
+    padding: 10px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+
+
+
+/* salles */
+
+.salles .contenu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.salles .contenu .box{
+    width: 250px;
+    margin: 15px;
+    border: 2px solid #2a4963;
+    /* box-shadow: 20px 15px 35px rgba(0, 0, 0, 0.8); */
+}
+
+.salles .contenu .box .imbox{
+    position: relative;
+    width: 100%;
+    height: 210px;
+}
+.salles .contenu .box .imbox:hover .text{
+    display: block;
+}
+
+.salles .contenu .box .imbox img{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 210px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.salles .contenu .box .text{
+
+    text-decoration-style: 0;
+    color: black;
+    z-index: 18;
+    position: relative;
+    bottom: 30%;
+}
+
+li{
+    list-style-type: none;
+}
